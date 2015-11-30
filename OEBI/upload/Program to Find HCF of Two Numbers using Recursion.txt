@@ -1,0 +1,20 @@
+
+
+#include <stdio.h>
+int hcf(int, int);
+main()
+{
+int h, i, a, b;
+printf("\nEnter values of two numbers: ");
+scanf("%d %d", &a, &b);
+h = hcf(a, b);
+printf("\nHCF of numbers is: %d", h);
+getch();
+}
+int hcf(int a, int b)
+{
+if (a%b == 0)
+return b;
+else
+return hcf(b, a%b);
+}
